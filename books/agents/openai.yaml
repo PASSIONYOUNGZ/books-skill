@@ -1,0 +1,4 @@
+interface:
+  display_name: "Books Skill"
+  short_description: "通用书籍精读整理，抽取正文、生成Markdown/EPUB并自检"
+  default_prompt: "Use $books to extract, summarize, export, and self-check one book or a folder of books."
