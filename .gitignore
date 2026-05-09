@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+venv/
+env/
+
+# Generated book outputs
+*_book_summaries/
+output/
+outputs/
+markdown/
+epub/
+self_check/
+extracted_text/
+manifest.json
+batch_report.md
+content_quality_audit.json
+audit_report.json
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
