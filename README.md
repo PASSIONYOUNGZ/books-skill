@@ -1,6 +1,6 @@
-# Codex Book Skill
+# Universal Book Skill
 
-一个通用的 Codex 书籍整理 skill，用于把单本书或一整个文件夹的书籍资料整理成可学习、可复查、可导出的 Markdown 与 EPUB。
+一个通用的书籍整理 agent skill，用于把单本书或一整个文件夹的书籍资料整理成可学习、可复查、可导出的 Markdown 与 EPUB。
 
 它不是普通摘要模板。这个 skill 的目标是让读者在不打开原书的情况下，尽可能吸收原书的结构、观点、方法、案例、证据、练习、叙事脉络和限制。
 
@@ -25,25 +25,43 @@
 
 ## 安装
 
-把仓库里的 `book/` 文件夹复制到 Codex 的 skills 目录。
+这个项目采用通用的“说明文件 + 脚本 + 参考资料”结构。任何支持自定义技能、系统提示、工具说明或工作流文件的 agent，都可以直接读取 `book/SKILL.md`，并按需调用 `book/scripts/` 里的脚本。
+
+推荐仓库名：`universal-book-skill`。
+
+克隆示例：
 
 Windows PowerShell：
 
 ```powershell
-git clone https://github.com/vsunsky567-droid/codex-book-skill.git
-New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.codex\skills" | Out-Null
-Copy-Item -Path ".\codex-book-skill\book" -Destination "$env:USERPROFILE\.codex\skills" -Recurse -Force
+git clone https://github.com/PASSIONYOUNGZ/universal-book-skill.git
+cd universal-book-skill
 ```
 
 macOS / Linux：
 
 ```bash
-git clone https://github.com/vsunsky567-droid/codex-book-skill.git
-mkdir -p ~/.codex/skills
-cp -R codex-book-skill/book ~/.codex/skills/book
+git clone https://github.com/PASSIONYOUNGZ/universal-book-skill.git
+cd universal-book-skill
 ```
 
-重启或刷新 Codex 后，就可以用 `$book` 触发这个 skill。
+## 在不同 agent 工具中使用
+
+### 通用方式
+
+把 `book/SKILL.md` 作为 agent 的技能说明、系统提示、项目指令或工作流说明加载。需要抽取文本、生成 EPUB 或做质量审计时，让 agent 调用 `book/scripts/` 中的脚本。
+
+最小使用方式：
+
+1. 让 agent 阅读 `book/SKILL.md`。
+2. 按需阅读 `book/references/` 中的写作、自检和环境说明。
+3. 使用 `book/scripts/check_environment.py` 检查依赖。
+4. 使用 `book/scripts/extract_books.py` 抽取源文本。
+5. 让 agent 根据抽取文本写 Markdown、生成 EPUB、运行审计并输出报告。
+
+### 兼容本地 skills 目录的工具
+
+如果你的 agent 工具支持“本地 skills 目录”，可以把 `book/` 文件夹复制到对应目录。目录名保持为 `book`，这样用户可以用类似“使用 book skill 整理这本书”的方式触发。
 
 ## 依赖
 
@@ -119,7 +137,7 @@ python book/scripts/check_environment.py
 ## 项目结构
 
 ```text
-codex-book-skill/
+universal-book-skill/
 |-- README.md
 |-- .gitignore
 `-- book/
@@ -142,11 +160,12 @@ codex-book-skill/
 
 ## 验证
 
-如果你本地有 Codex 的 `skill-creator` 校验脚本，可以运行：
+如果你的 agent 平台提供 skill 校验脚本，可以用它校验 `book/` 目录。没有校验脚本也不影响使用；这个项目的核心是 `SKILL.md`、`references/` 和 `scripts/`。
+
+示例：
 
 ```bash
-python path/to/skill-creator/scripts/quick_validate.py book
+python path/to/validator.py book
 ```
 
-本仓库中的 `book` skill 已按 Codex skill 结构组织，包含必需的 `SKILL.md` frontmatter、脚本和参考资料。
-
+本仓库中的 `book` skill 使用通用 Markdown 指令组织，并附带可独立运行的 Python 工具脚本。它不绑定特定 agent 产品、用户名、项目路径或操作系统。

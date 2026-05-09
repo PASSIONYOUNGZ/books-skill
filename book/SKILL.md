@@ -1,6 +1,6 @@
 ---
 name: book
-description: Universal high-quality single-book and batch-book summarization workflow for EPUB, PDF, DOCX, TXT, Markdown, HTML, and similar book sources. Use when Codex must adapt to the user's language, environment, file formats, book genre, and requested output; extract reliable text; detect scanned or low-quality sources; produce detailed Markdown and EPUB study summaries; run strict self-checks; maintain no-omission/no-duplicate status; and deliver a complete workflow report.
+description: Universal high-quality single-book and batch-book summarization workflow for EPUB, PDF, DOCX, TXT, Markdown, HTML, and similar book sources. Use when an agent must adapt to the user's language, environment, file formats, book genre, and requested output; extract reliable text; detect scanned or low-quality sources; produce detailed Markdown and EPUB study summaries; run strict self-checks; maintain no-omission/no-duplicate status; and deliver a complete workflow report.
 ---
 
 # Book
