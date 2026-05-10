@@ -1,4 +1,4 @@
-# Books Skill
+# Books Skill —— 书籍精读整理
 
 把 agent 变成书籍整理员。**单本能精读，整批也能处理，输出 Markdown + EPUB。**
 
