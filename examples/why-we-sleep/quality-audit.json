@@ -1,0 +1,37 @@
+{
+  "markdown_dir": "我们为什么要睡觉_book_summaries\\markdown",
+  "file_count": 1,
+  "files_with_red_flags": 0,
+  "files_with_warnings": 0,
+  "gate_summary": {
+    "blocked_revise_before_export": 0,
+    "agent_self_review": 0,
+    "pass_with_sampling": 1
+  },
+  "quality_owner": "agent",
+  "items": [
+    {
+      "file": "我们为什么要睡觉_精读整理.md",
+      "char_count": 10839,
+      "h1_count": 4,
+      "h2_count": 12,
+      "h3_count": 16,
+      "paragraphs_checked": 56,
+      "duplicate_paragraph_count": 0,
+      "duplicate_paragraph_ratio": 0.0,
+      "duplicate_samples": [],
+      "generic_phrase_count": 0,
+      "method_signal_count": 17,
+      "case_signal_count": 21,
+      "boundary_signal_count": 34,
+      "repeated_h3": {},
+      "red_flags": [],
+      "warnings": [],
+      "gate_status": "pass",
+      "recommended_action": "pass_with_sampling",
+      "agent_quality_owner": true,
+      "needs_manual_review": false,
+      "needs_agent_review": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "output_dir": "E:\\Codex\\book\\我们为什么要睡觉_book_summaries",
+  "markdown_count": 1,
+  "epub_count": 1,
+  "self_check_count": 1,
+  "items": [
+    {
+      "title": "我们为什么要睡觉_精读整理",
+      "markdown": "E:\\Codex\\book\\我们为什么要睡觉_book_summaries\\markdown\\我们为什么要睡觉_精读整理.md",
+      "char_count": 10839,
+      "h1_count": 4,
+      "h2_count": 12,
+      "bold_count": 39,
+      "forbidden": [],
+      "epub": {
+        "exists": true,
+        "structure_ok": true,
+        "bold_ok": true,
+        "error": ""
+      },
+      "self_check_exists": true,
+      "ok": true
+    }
+  ],
+  "all_ok": true
+}
